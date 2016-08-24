@@ -1,0 +1,13 @@
+<body>
+  <header>
+    {{> loginButtons}}
+  </header>
+  {{#if currentUser}}
+    <div class="container">
+      {{> customUserFields id="cuf_form"}}
+    </div>
+  {{/if}}
+</body>
+<template name="customUserFields">
+  {{> quickForm params}}
+</template>
