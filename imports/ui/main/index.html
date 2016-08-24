@@ -1,13 +1,23 @@
 <body>
-  <header>
-    {{> loginButtons}}
-  </header>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-brand">
+          {{> loginButtons}}
+        </div>
+      </div>
+      {{#if currentUser}}
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" data-template="customUserFields">Insert/Update</a></li>
+          </ul>
+        </div>
+      {{/if}}
+    </div>
+  </nav>
   {{#if currentUser}}
     <div class="container">
-      {{> customUserFields id="cuf_form"}}
+      {{> Template.dynamic template=template}}
     </div>
   {{/if}}
 </body>
-<template name="customUserFields">
-  {{> quickForm params}}
-</template>
