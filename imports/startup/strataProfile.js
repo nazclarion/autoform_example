@@ -9,6 +9,7 @@ SimpleSchema.messages({
 const strataProfileSchema = new SimpleSchema({
   'strataProfile': {
     type: Object,
+    label: 'Strata Profile',
   },
   'strataProfile.phMobile': {
     type: String,

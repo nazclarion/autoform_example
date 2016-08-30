@@ -1,5 +1,4 @@
-import './accounts-config.js'
 import '../strataProfile.js'
-import { CustomUserFields } from '../../api'
+import API from '../../api'
 
-window.global.CustomUserFields = CustomUserFields;
+Object.keys(API).map(key => window.global[key] = API[key]);

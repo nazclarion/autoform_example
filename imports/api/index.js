@@ -1,1 +1,2 @@
-export * from './cuf/collection.js';
+export * from './settings/collection.js'
+export * from './cuf/collection.js'

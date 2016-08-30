@@ -1,2 +1,2 @@
-import '../imports/startup/client';
-import '../imports/ui/main';
+import '../imports/startup/client'
+import '../imports/ui/index'

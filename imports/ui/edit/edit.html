@@ -1,0 +1,30 @@
+<template name="editCustomUserFields">
+  <h4>Custom user fields settings</h4>
+  <hr>
+  {{#if settings}}
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Label</th>
+          <th>Path</th>
+          <th>Optional</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each settings}}
+          <tr data-id="{{_id}}" class="settings-row">
+            <td>
+              {{#if editMode _id}}
+              <input type="text" name="label" value="{{value.label}}" data-id="{{_id}}">
+              {{else}}
+              {{value.label}}
+              {{/if}}
+            </td>
+            <td>{{_id}}</td>
+            <td>{{value.optional}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{/if}}
+</template>
